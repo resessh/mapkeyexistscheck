@@ -1,0 +1,68 @@
+(*ast.AssignStmt)(0x140079aa700)({
+ Lhs: ([]ast.Expr) (len=1 cap=1) {
+  (*ast.Ident)(0x14007782c80)(mapValue)
+ },
+ TokPos: (token.Pos) 3526936,
+ Tok: (token.Token) :=,
+ Rhs: ([]ast.Expr) (len=1 cap=1) {
+  (*ast.CompositeLit)(0x140079aa6c0)({
+   Type: (*ast.MapType)(0x140079b70e0)({
+    Map: (token.Pos) 3526939,
+    Key: (*ast.Ident)(0x14007782ca0)(string),
+    Value: (*ast.Ident)(0x14007782cc0)(int)
+   }),
+   Lbrace: (token.Pos) 3526953,
+   Elts: ([]ast.Expr) (len=2 cap=2) {
+    (*ast.KeyValueExpr)(0x140079b7110)({
+     Key: (*ast.BasicLit)(0x14007782ce0)({
+      ValuePos: (token.Pos) 3526954,
+      Kind: (token.Token) STRING,
+      Value: (string) (len=3) "\"a\""
+     }),
+     Colon: (token.Pos) 3526957,
+     Value: (*ast.BasicLit)(0x14007782d00)({
+      ValuePos: (token.Pos) 3526959,
+      Kind: (token.Token) INT,
+      Value: (string) (len=1) "1"
+     })
+    }),
+    (*ast.KeyValueExpr)(0x140079b7140)({
+     Key: (*ast.BasicLit)(0x14007782d20)({
+      ValuePos: (token.Pos) 3526962,
+      Kind: (token.Token) STRING,
+      Value: (string) (len=3) "\"b\""
+     }),
+     Colon: (token.Pos) 3526965,
+     Value: (*ast.BasicLit)(0x14007782d40)({
+      ValuePos: (token.Pos) 3526967,
+      Kind: (token.Token) INT,
+      Value: (string) (len=1) "2"
+     })
+    })
+   },
+   Rbrace: (token.Pos) 3526968,
+   Incomplete: (bool) false
+  })
+ }
+})
+(*ast.AssignStmt)(0x140079aa740)({
+ Lhs: ([]ast.Expr) (len=1 cap=1) {
+  (*ast.Ident)(0x14007782d80)(a)
+ },
+ TokPos: (token.Pos) 3526973,
+ Tok: (token.Token) :=,
+ Rhs: ([]ast.Expr) (len=1 cap=1) {
+  (*ast.IndexExpr)(0x140079b7170)({
+   X: (*ast.Ident)(0x14007782da0)(mapValue),
+   Lbrack: (token.Pos) 3526984,
+   Index: (*ast.BasicLit)(0x14007782dc0)({
+    ValuePos: (token.Pos) 3526985,
+    Kind: (token.Token) STRING,
+    Value: (string) (len=3) "\"a\""
+   }),
+   Rbrack: (token.Pos) 3526988
+  })
+ }
+})
+PASS
+ok  	github.com/resessh/mapkeyexistscheck	0.742s
